@@ -11,7 +11,7 @@ Made for the masses who are always looking into the web for their health and fit
 So as to reduce each and every step from these set of actions and the time killed to perform those actions, this project was developed.
 
 ### Challenges we faced
-
+While making of this project we came across the challenge of working in a remote team, as per we look into the experience of each member there was a lack of communication between the members as we were not able to be present and working together in person. Another challenge we looked was using new technologies to configure in our app, for few of our team members making this project was a whole new experience as it taught us many new exposure and gave a chance to excel further in our career.
 
 ### Technologies Used
 - `OpenAI API`
