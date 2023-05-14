@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { Inter } from "next/font/google";
-
+import Image from "next/image"
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -11,7 +11,7 @@ export default function Home() {
         <div className="row">
           <div className="col-lg-4 mb-3"></div>
           <div className="col-lg-4 mb-3">
-            <img src = {require('Images/logo.png')} alt = "logo"/>
+            <Image src = {require('Images/logo.png')} alt = "logo"/>
           </div>
           <div className="col-lg-4 mb-3"></div>
         </div>
