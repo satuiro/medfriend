@@ -2,3 +2,23 @@
     display: flex;
     flex-direction: column;
 }
+
+.disply-flex{
+    display: flex;
+    padding-left: 1.2rem;
+}
+
+.text-272343{
+    color: #272343;
+}
+
+.padding-allsides{
+    margin-top: 1.5rem;
+    margin-right: .25rem;
+    margin-bottom: .25rem;
+    margin-left: .25rem;
+}
+
+.width-30{
+    width: 30%;
+}
