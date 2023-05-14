@@ -20,7 +20,7 @@ export default function Home() {
           <Link href="/calorie"><button type="button" class="btn btn-lg btn-outline-warning">Calorie Assistant</button></Link>
         </div>
         <div className="col-4 ms-auto">
-          <Link href="/"><button type="button" class="btn btn-lg btn-outline-warning">Medical Assistant</button></Link>
+          <Link href="/symptoms"><button type="button" class="btn btn-lg btn-outline-warning">Medical Assistant</button></Link>
         </div>
         </div>
 
