@@ -17,7 +17,7 @@ export default function Calorie() {
     fetch("/api/calorie", { method: "POST", body: JSON.stringify(obj) })
       .then((res) => res.json())
       .then((data) => {
-        console.log(data);
+        console.log("response: ", data);
         setResponse(data);
       });
   }
@@ -50,25 +50,30 @@ export default function Calorie() {
           <input type="text" name="height" pattern="[0-9]{3}" id="height" />
         </>
         <>
-          <label htmlFor="weight">Weight: </label>
+          <label htmlFor="weight">Weight (in kg): </label>
           <input type="text" name="weight" id="weight" pattern="[0-9]{2,3}" />
         </>
         <div>
           <label htmlFor="diet">Type of diet: </label>
 
-          <input type="radio" name="diet" id="veg" />
+          <input type="radio" name="diet" id="veg" value={"Vegitarian"} />
           <label htmlFor="veg">Vegitarian</label>
 
-          <input type="radio" name="diet" id="egg" />
+          <input type="radio" name="diet" id="egg" value={"Eggitarian"} />
           <label htmlFor="egg">Eggitarian</label>
 
-          <input type="radio" name="diet" id="nonVeg" />
+          <input
+            type="radio"
+            name="diet"
+            id="nonVeg"
+            value={"Non Vegetarian"}
+          />
           <label htmlFor="nonVeg">Non Vegetarian</label>
 
-          <input type="radio" name="diet" id="keto" />
+          <input type="radio" name="diet" id="keto" value={"Keto"} />
           <label htmlFor="keto">Keto</label>
 
-          <input type="radio" name="diet" id="vegan" />
+          <input type="radio" name="diet" id="vegan" value={"Vegan"} />
           <label htmlFor="vegan">Vegan</label>
         </div>
         <>
@@ -79,7 +84,7 @@ export default function Calorie() {
           <button type="submit">Submit</button>
         </>
       </form>
-      <div className="response"></div>
+      <div className="response">{!!response && response}</div>
     </>
   );
 }
