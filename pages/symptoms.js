@@ -136,7 +136,7 @@ export default function Symptoms() {
           </div>
         </div>
 
-        <div className="display-flex mt-4 w-75 ms-auto me-auto">
+        <div className="display-flex mt-4 w-25 ms-auto me-auto">
           <div className="input-group input-group-lg">
             <span
               className="input-group-text bg-warning text-272343"
@@ -157,7 +157,7 @@ export default function Symptoms() {
           </div>
         </div>
 
-        <div className="display-flex mt-4 w-75 ms-auto me-auto">
+        <div className="display-flex mt-4 w-25 ms-auto me-auto">
           <div className="input-group input-group-lg">
             <span
               className="input-group-text bg-warning text-272343"
@@ -178,7 +178,7 @@ export default function Symptoms() {
           </div>
         </div>
 
-        <div className="display-flex mt-4 w-75 ms-auto me-auto">
+        <div className="display-flex mt-4 w-50 ms-auto me-auto">
           <div className="input-group input-group-lg">
             <span
               className="input-group-text bg-warning text-272343"
@@ -213,15 +213,15 @@ export default function Symptoms() {
           <>
             {/* {JSON.stringify(response)} */}
             <div className="res-card">
-              <h2>Potential causes of your symptoms: </h2>
+              <h2 className="fw-semibold">Potential causes of your symptoms: </h2>
               <p>{response["cause"]}</p>
             </div>
             <div className="res-card">
-              <h2>Health Issues: </h2>
+              <h2 className="fw-semibold">Health Issues: </h2>
               <p>{response["healthIssue"]}</p>
             </div>
             <div className="res-card">
-              <h2>Possible Treatment</h2>
+              <h2 className="fw-semibold">Possible Treatment:</h2>
               <p>{response["treatment"]}</p>
             </div>
           </>
