@@ -93,7 +93,7 @@ export default function Calorie() {
               className="form-check-input mt-1 "
             />
             <label htmlFor="male" className="text-272343 ms-3">
-              Male
+              Male ♂
             </label>
           </div>
           <div className="input-group-text col-lg-4 bg-warning">
@@ -105,7 +105,7 @@ export default function Calorie() {
               className="form-check-input mt-1 "
             />
             <label htmlFor="female" className="text-272343 ms-3">
-              Female
+              Female ♀
             </label>
           </div>
         </div>
@@ -161,14 +161,14 @@ export default function Calorie() {
           <div className="input-group-text bg-warning text-272343 col-lg-4 mb-1 w-25">
             <input type="radio" name="diet" id="veg" value={"Vegitarian"} />
             <label htmlFor="veg" className="ms-3">
-              Vegitarian
+              Vegitarian 🌱
             </label>
           </div>
 
           <div className="input-group-text bg-warning text-272343 col-lg-4 mb-1 w-25">
             <input type="radio" name="diet" id="egg" value={"Eggitarian"} />
             <label htmlFor="egg" className="ms-3">
-              Eggitarian
+              Eggitarian 🥚
             </label>
           </div>
 
@@ -181,7 +181,7 @@ export default function Calorie() {
               value={"Non Vegetarian"}
             />
             <label htmlFor="nonVeg" className="ms-3">
-              Non Vegetarian
+              Non Vegetarian 🍗
             </label>
           </div>
 
@@ -208,7 +208,7 @@ export default function Calorie() {
               id="inputGroup-sizing-lg"
             >
               <label htmlFor="allergies">
-                <p className="fs-3 fw-semibold">Allergies: </p>
+                <p className="fs-3 fw-semibold">Allergies 🤧: </p>
               </label>
             </span>
             <input

@@ -3,6 +3,7 @@ import { useState } from "react";
 export default function Symptoms() {
   const [response, setResponse] = useState(null);
   function handleSubmit(e) {
+    setResponse(null);
     e.preventDefault();
     const { target: el } = e;
     const {
@@ -26,6 +27,8 @@ export default function Symptoms() {
     fetch("/api/symptoms", { method: "POST", body: JSON.stringify(obj) })
       .then((res) => res.json())
       .then((data) => {
+        console.log(typeof data);
+        data = JSON.parse(data.response);
         console.log("response: ", data);
         setResponse(data);
       });
@@ -71,10 +74,10 @@ export default function Symptoms() {
               name="gender"
               value="male"
               id="male"
-              class="form-check-input mt-1 "
+              className="form-check-input mt-1 "
             />
             <label htmlFor="male" className="text-272343 ms-3">
-              Male
+              Male ♂
             </label>
           </div>
           <div className="input-group-text col-lg-4 bg-warning">
@@ -83,10 +86,10 @@ export default function Symptoms() {
               name="gender"
               value="female"
               id="female"
-              class="form-check-input mt-1 "
+              className="form-check-input mt-1 "
             />
             <label htmlFor="female" className="text-272343 ms-3">
-              Female
+              Female ♀
             </label>
           </div>
         </div>
@@ -182,7 +185,7 @@ export default function Symptoms() {
               id="inputGroup-sizing-lg"
             >
               <label htmlFor="medicalrecord">
-                <p className="fs-3 fw-semibold">Previous Illness: </p>
+                <p className="fs-3 fw-semibold">Previous Illness 🏥: </p>
               </label>
             </span>
             <input
@@ -199,13 +202,31 @@ export default function Symptoms() {
         <div className="text-center mt-5">
           <button
             type="submit"
-            class="btn btn-block btn-lg bg-warning text-272343 fw-bold"
+            className="btn btn-block btn-lg bg-warning text-272343 fw-bold"
           >
             Submit
           </button>
         </div>
       </form>
-      <div className="response">{!!response && response}</div>
+      <div className="response">
+        {!!response && (
+          <>
+            {/* {JSON.stringify(response)} */}
+            <div className="res-card">
+              <h2>Potential causes of your symptoms: </h2>
+              <p>{response["cause"]}</p>
+            </div>
+            <div className="res-card">
+              <h2>Health Issues: </h2>
+              <p>{response["healthIssue"]}</p>
+            </div>
+            <div className="res-card">
+              <h2>Possible Treatment</h2>
+              <p>{response["treatment"]}</p>
+            </div>
+          </>
+        )}
+      </div>
     </div>
   );
 }

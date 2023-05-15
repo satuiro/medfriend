@@ -17,10 +17,10 @@ export default function Home() {
         </div>
         <div className="row justify-content-evenly">
         <div className="col-4 ms-auto">
-          <Link href="/calorie"><button type="button" class="btn btn-lg btn-outline-warning">Calorie Assistant</button></Link>
+          <Link href="/calorie"><button type="button" className="btn btn-lg btn-outline-warning">Calorie Assistant</button></Link>
         </div>
         <div className="col-4 ms-auto">
-          <Link href="/symptoms"><button type="button" class="btn btn-lg btn-outline-warning">Medical Assistant</button></Link>
+          <Link href="/symptoms"><button type="button" className="btn btn-lg btn-outline-warning">Medical Assistant</button></Link>
         </div>
         </div>
 

@@ -5,7 +5,8 @@ const config = new Configuration({
 
 const openai = new OpenAIApi(config);
 export default async function handler(req, res) {
-  const { age, gender, height, weight, lifestyle, symptoms,medicalrecord } = JSON.parse(req.body);
+  const { age, gender, height, weight, lifestyle, symptoms, medicalrecord } =
+    JSON.parse(req.body);
   //   console.log(age, gender, height, weight, diet, allergies);
   const runPrompt = async () => {
     console.log("function called");
@@ -35,7 +36,7 @@ export default async function handler(req, res) {
     const parsableJSONresponse = response.data.choices[0].text;
     console.log(parsableJSONresponse);
     // const parsedResponse = JSON.parse(parsableJSONresponse);
-    res.send(JSON.stringify(parsableJSONresponse));
+    res.send(JSON.stringify({ response: parsableJSONresponse }));
   };
   runPrompt();
 }
