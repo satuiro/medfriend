@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg viewBox="0 0 72 54" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 41.2 (35397) - http://www.bohemiancoding.com/sketch -->
+    <title>pin for scale</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <filter x="-50%" y="-50%" width="200%" height="200%" filterUnits="objectBoundingBox" id="filter-1">
+            <feOffset dx="0" dy="2" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="2" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0.215686275   0 0 0 0 0.278431373   0 0 0 0 0.309803922  0 0 0 0.178470335 0" type="matrix" in="shadowBlurOuter1" result="shadowMatrixOuter1"></feColorMatrix>
+            <feMerge>
+                <feMergeNode in="shadowMatrixOuter1"></feMergeNode>
+                <feMergeNode in="SourceGraphic"></feMergeNode>
+            </feMerge>
+        </filter>
+        <path d="M20.4306674,0 C9.32341764,0 0.320875835,8.38531721 0.320875835,18.7295545 C0.320875835,19.1166464 0.335957341,19.5015041 0.361093184,19.8824518 C1.22855905,36.6301847 20.4306674,59.3451667 20.4306674,59.3451667 C20.4306674,59.3451667 39.6305414,36.6301847 40.4980072,19.8824518 C40.5231431,19.5015041 40.5393417,19.1166464 40.5393417,18.7295545 C40.5393417,8.38531721 31.5367999,0 20.4306674,0" id="path-2"></path>
+        <filter x="-50%" y="-50%" width="200%" height="200%" filterUnits="objectBoundingBox" id="filter-3">
+            <feOffset dx="0" dy="2" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="2" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0.8   0 0 0 0 0.8   0 0 0 0 0.8  0 0 0 1 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
+        </filter>
+    </defs>
+    <g id="Symbols">
+        <g id="m:-bmi-header-w-Results1" transform="translate(-26.000000, -470.000000)">
+            <g id="vertical-bmi-scale" transform="translate(30.000000, 342.000000)">
+                <g id="pin-for-scale" filter="url(#filter-1)" transform="translate(1.000000, 132.000000)">
+                    <g id="Group-3" transform="translate(30.000000, 21.153007) rotate(-90.000000) translate(-30.000000, -21.153007) translate(9.500000, -8.846993)">
+                        <g id="Fill-1-Copy">
+                            <use fill="black" fill-opacity="1" filter="url(#filter-3)" xlink:href="#path-2"></use>
+                            <use fill="#FFFFFF" fill-rule="evenodd" xlink:href="#path-2"></use>
+                        </g>
+                        <path d="M5.18173644,19.290362 C5.14411537,19.6980419 5.12491547,20.1106251 5.12491547,20.5273861 C5.12491547,20.8220029 5.13639404,21.1149191 5.155525,21.4048594 C5.8157557,34.1516057 20.4305339,51.4400419 20.4305339,51.4400419 C20.4305339,51.4400419 35.0436116,34.1516057 35.7038423,21.4048594 C35.7229733,21.1149191 35.7353021,20.8220029 35.7353021,20.5273861 C35.7353021,20.1106216 35.7161019,19.6980351 35.6784803,19.290352 C35.4885401,11.6093761 28.7211296,5.41604093 20.4305801,5.41604093 C12.1381683,5.41604093 5.37164543,11.6093815 5.18173644,19.290362 Z" id="Combined-Shape" fill="#37474F"></path>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
