@@ -19,10 +19,13 @@ export default function Calorie() {
       .then((res) => res.json())
       .then((data) => {
         // console.log("\n\n", data, data["response"], typeof data);
-        data = JSON.parse(data);
+        // data = JSON.parse(data);
         // console.log("response: ", data);
         // debugger;
         // console.log("\n\n", data["response"], typeof data);
+        if (data.response) {
+          data = data.response;
+        }
         setResponse(data);
       });
   }

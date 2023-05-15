@@ -34,10 +34,21 @@ export default async function handler(req, res) {
       temperature: 1,
     });
 
-    const parsableJSONresponse = response.data.choices[0].text;
-    console.log(parsableJSONresponse);
+    let parsableJSONresponse = response.data.choices[0].text;
+    if (parsableJSONresponse.includes("Answer:")) {
+      console.log("answer: there");
+      parsableJSONresponse = parsableJSONresponse.substring(
+        parsableJSONresponse.indexOf("Answer:") + 8
+      );
+    }
+    console.log(parsableJSONresponse, typeof parsableJSONresponse);
+    let parsedResponse = JSON.parse(parsableJSONresponse);
+    if (parsedResponse["Answer"]) {
+      parsedResponse = parsedResponse["Answer"];
+    }
+    console.log(parsedResponse, typeof parsedResponse);
     // const parsedResponse = JSON.parse(parsableJSONresponse);
-    res.send(JSON.stringify(parsableJSONresponse));
+    res.send(JSON.stringify({ response: parsedResponse }));
   };
   runPrompt();
   // this is just a sample response from Openai API, use this instead of runPrompt() to save api credits
