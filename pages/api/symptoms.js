@@ -14,7 +14,6 @@ export default async function handler(req, res) {
     Offer a general medical advice and give the appropriate cause of symptoms,what health issue person might be suffering from 
     and the treatment for the health issue that may include medical test,general treatment for the person where the height is ${height}, 
     weight is ${weight}, age is ${age},gender of the person is ${gender}, the lifestyle of person include diet as ${lifestyle} ,the previous medical history of person is ${medicalrecord} and the symptoms are ${symptoms}.
-    Also add emojis to the treatment response accordingly. 
     Return response in the following parsable JSON format:
 
     {
