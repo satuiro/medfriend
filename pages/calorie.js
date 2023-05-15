@@ -58,7 +58,7 @@ export default function Calorie() {
           handleSubmit(e);
         }}
       >
-        <div className="input-group input-group-lg display-flex bg-yellow">
+        <div className="input-group input-group-lg display-flex bg-yellow w-25 me-auto ms-auto">
           <span
             className="input-group-text bg-warning text-272343"
             id="inputGroup-sizing-lg bg-yellow"
@@ -78,7 +78,7 @@ export default function Calorie() {
           ></input>
         </div>
 
-        <div className="display-flex row mt-4">
+        <div className="display-flex   row mt-4 w-25 ms-auto me-auto">
           <div className="col-lg-4">
             <label htmlFor="gender">
               <p className="fs-3 fw-semibold text-272343 me-0">Gender: </p>
@@ -110,7 +110,7 @@ export default function Calorie() {
           </div>
         </div>
 
-        <div className="input-group input-group-lg display-flex mt-4">
+        <div className="input-group height input-group-lg display-flex mt-4 w-25 ms-auto me-auto">
           <span
             className="input-group-text bg-warning text-272343"
             id="inputGroup-sizing-lg"
@@ -130,7 +130,7 @@ export default function Calorie() {
           />
         </div>
 
-        <div className="display-flex mt-4">
+        <div className="display-flex mt-4 w-25 me-auto ms-auto">
           <div className="input-group input-group-lg">
             <span
               className="input-group-text bg-warning text-272343"
@@ -152,20 +152,20 @@ export default function Calorie() {
           </div>
         </div>
 
-        <div className="display-flex row mt-4 mb-1">
+        <div className="display-flex row mt-4 mb-1 w-50 ms-auto me-auto">
           <div className="col-lg-4 mb-1">
             <label htmlFor="diet">
               <p className="fs-3 fw-semibold">Type of diet: </p>
             </label>
           </div>
-          <div className="input-group-text bg-warning text-272343 col-lg-4 mb-1 ">
+          <div className="input-group-text bg-warning text-272343 col-lg-4 mb-1 w-25">
             <input type="radio" name="diet" id="veg" value={"Vegitarian"} />
             <label htmlFor="veg" className="ms-3">
               Vegitarian
             </label>
           </div>
 
-          <div className="input-group-text bg-warning text-272343 col-lg-4 mb-1 ">
+          <div className="input-group-text bg-warning text-272343 col-lg-4 mb-1 w-25">
             <input type="radio" name="diet" id="egg" value={"Eggitarian"} />
             <label htmlFor="egg" className="ms-3">
               Eggitarian
@@ -173,7 +173,7 @@ export default function Calorie() {
           </div>
 
           <div className="col-lg-4 mb-1"></div>
-          <div className="input-group-text bg-warning text-272343 col-lg-4 mb-1 pb-4 ">
+          <div className="input-group-text bg-warning text-272343 col-lg-4 mb-1 pb-4 w-25">
             <input
               type="radio"
               name="diet"
@@ -185,7 +185,7 @@ export default function Calorie() {
             </label>
           </div>
 
-          <div className="input-group-text bg-warning text-272343 col-lg-4 mb-1 pb-4 ">
+          <div className="input-group-text bg-warning text-272343 col-lg-4 mb-1 pb-4 w-25">
             <input type="radio" name="diet" id="keto" value={"Keto"} />
             <label htmlFor="keto" className="ms-3">
               Keto
@@ -193,7 +193,7 @@ export default function Calorie() {
           </div>
 
           <div className="col-lg-4 mb-1"></div>
-          <div className="input-group-text bg-warning text-272343 col-lg-4 mb-1 pb-4 ">
+          <div className="input-group-text bg-warning text-272343 col-lg-4 mb-1 pb-4 w-25">
             <input type="radio" name="diet" id="vegan" value={"Vegan"} />
             <label htmlFor="vegan" className="ms-3">
               Vegan
@@ -201,7 +201,7 @@ export default function Calorie() {
           </div>
         </div>
 
-        <div className="display-flex mt-4">
+        <div className="display-flex mt-4 w-25 me-auto ms-auto">
           <div className="input-group input-group-lg">
             <span
               className="input-group-text bg-warning text-272343"
@@ -235,12 +235,12 @@ export default function Calorie() {
         {!!response && (
           <>
             {/* {JSON.stringify(response)} uncomment this to see the exact response from the server for testing and debugging  */}
-            <div className="res-card">
-              <h2>Your BMI:</h2>
+            <div className="res-card w-75">
+              <h2 className="fs-3 fw-semibold">Your BMI:</h2>
               <span>{response["bmi"]}</span>
               <div className="graphic-value your-bmi">
                 <div className="scale-rectangle scale-bmi">
-                  <span
+                  <span  w-50  me-auto
                     className="marker"
                     style={{ bottom: `${(response["bmi"] / 50) * 400 - 24}px` }}
                   >
@@ -276,8 +276,8 @@ export default function Calorie() {
                 </a>
               </span>
             </div>
-            <div className="res-card">
-              <h2>Your BMR: </h2>
+            <div className="res-card w-75 ">
+              <h2 className="fs-3 fw-semibold">Your BMR: </h2>
               <span>{response["bmr"]}</span>
               <p>
                 Your basal metabolic rate (BMR) is the number of calories your
@@ -291,16 +291,16 @@ export default function Calorie() {
                 </a>
               </p>
             </div>
-            <div className="res-card">
-              <h2>Diet Chart: </h2>
+            <div className="res-card w-75 ">
+              <h2 className="fs-3 fw-semibold">Diet Chart: </h2>
               <p>{response["dietchart"]}</p>
             </div>
-            <div className="res-card">
-              <h2>Workout Plan: </h2>
+            <div className="res-card w-75 ">
+              <h2 className="fs-3 fw-semibold">Workout Plan: </h2>
               <p>{response["workout"]}</p>
             </div>
-            <div className="res-card">
-              <h2>Cardio Plan: </h2>
+            <div className="res-card w-75 ">
+              <h2 className="fs-3 fw-semibold">Cardio Plan: </h2>
               <p>{response["cardio"]}</p>
             </div>
           </>

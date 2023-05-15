@@ -39,7 +39,7 @@ export default function Symptoms() {
           handleSubmit(e);
         }}
       >
-        <div className="input-group input-group-lg display-flex bg-yellow">
+        <div className="input-group input-group-lg display-flex bg-yellow w-25 ms-auto me-auto">
           <span
             className="input-group-text bg-warning text-272343"
             id="inputGroup-sizing-lg bg-yellow"
@@ -59,7 +59,7 @@ export default function Symptoms() {
           ></input>
         </div>
 
-        <div className="display-flex row mt-4">
+        <div className="display-flex row mt-4 w-25 ms-auto me-auto">
           <div className="col-lg-4">
             <label htmlFor="gender">
               <p className="fs-3 fw-semibold text-272343 me-0">Gender: </p>
@@ -91,7 +91,7 @@ export default function Symptoms() {
           </div>
         </div>
 
-        <div className="input-group input-group-lg display-flex mt-4">
+        <div className="input-group input-group-lg display-flex mt-4 w-25 ms-auto me-auto">
           <span
             className="input-group-text bg-warning text-272343"
             id="inputGroup-sizing-lg"
@@ -111,7 +111,7 @@ export default function Symptoms() {
           />
         </div>
 
-        <div className="display-flex mt-4">
+        <div className="display-flex mt-4 w-25 ms-auto me-auto">
           <div className="input-group input-group-lg">
             <span
               className="input-group-text bg-warning text-272343"
@@ -133,7 +133,7 @@ export default function Symptoms() {
           </div>
         </div>
 
-        <div className="display-flex mt-4">
+        <div className="display-flex mt-4 w-75 ms-auto me-auto">
           <div className="input-group input-group-lg">
             <span
               className="input-group-text bg-warning text-272343"
@@ -154,7 +154,7 @@ export default function Symptoms() {
           </div>
         </div>
 
-        <div className="display-flex mt-4">
+        <div className="display-flex mt-4 w-75 ms-auto me-auto">
           <div className="input-group input-group-lg">
             <span
               className="input-group-text bg-warning text-272343"
@@ -175,7 +175,7 @@ export default function Symptoms() {
           </div>
         </div>
 
-        <div className="display-flex mt-4">
+        <div className="display-flex mt-4 w-75 ms-auto me-auto">
           <div className="input-group input-group-lg">
             <span
               className="input-group-text bg-warning text-272343"

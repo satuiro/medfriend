@@ -10,8 +10,8 @@ export default async function handler(req, res) {
   const runPrompt = async () => {
     console.log("function called");
     const prompt = `
-        calculate the bmi where height is ${height} in centimeters and weight is ${weight}kg also specify the health of person according to the bmi
-        lying in the category of underweight overweight and healthy. Then also calculate the bmr value of the person where height is ${height} in metres, weight is ${weight}, age is ${age}, the diet the 
+        calculate the bmi using formula (weight divided by the square of the height) where height is ${height} in centimeters and weight is ${weight}kg also specify the health of person according to the bmi
+        lying in the category of underweight overweight and healthy. Then also calculate the bmr using formula ((10*weight)+(6.25*height(in centimeters))-(5*age)+5) for male and ((10*weight)+(6.25*height(in centimeters))-(5*age)-161) for female where the value of the person where height is ${height} in centimeters, weight is ${weight}, age is ${age}, the diet the 
         person follows is ${diet}, and the gender is ${gender} also recommend a diet chart for the person according to their allergies ${allergies}, bmr value, age and gender. Also recommend a weekly workout and cardio plan for the person and add emoji to the workout,cardio and diet chart response accordingly. 
         
         Return response in the following parsable JSON format:
