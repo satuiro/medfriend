@@ -12,10 +12,18 @@ export default function Symptoms() {
       weight: { value: weight },
       lifestyle: { value: lifestyle },
       symptoms: { value: symptoms },
-      medicalrecord:{value:medicalrecord}
+      medicalrecord: { value: medicalrecord },
     } = el;
-    const obj = { age, gender, height, weight, lifestyle, symptoms, medicalrecord };
-    fetch("/api/calorie", { method: "POST", body: JSON.stringify(obj) })
+    const obj = {
+      age,
+      gender,
+      height,
+      weight,
+      lifestyle,
+      symptoms,
+      medicalrecord,
+    };
+    fetch("/api/symptoms", { method: "POST", body: JSON.stringify(obj) })
       .then((res) => res.json())
       .then((data) => {
         console.log("response: ", data);
@@ -31,65 +39,171 @@ export default function Symptoms() {
           handleSubmit(e);
         }}
       >
-
         <div className="input-group input-group-lg display-flex bg-yellow">
-          <span className="input-group-text bg-warning text-272343" id="inputGroup-sizing-lg bg-yellow"><label htmlFor="age"><p className="fs-3 fw-semibold">Age: </p></label></span>
-          <input type="text" className="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-lg" pattern="[0-9]{2}" name="age" id="age"></input>
+          <span
+            className="input-group-text bg-warning text-272343"
+            id="inputGroup-sizing-lg bg-yellow"
+          >
+            <label htmlFor="age">
+              <p className="fs-3 fw-semibold">Age: </p>
+            </label>
+          </span>
+          <input
+            type="text"
+            className="form-control"
+            aria-label="Sizing example input"
+            aria-describedby="inputGroup-sizing-lg"
+            pattern="[0-9]{2}"
+            name="age"
+            id="age"
+          ></input>
         </div>
-        
+
         <div className="display-flex row mt-4">
           <div className="col-lg-4">
-            <label htmlFor="gender"><p className="fs-3 fw-semibold text-272343 me-0">Gender: </p></label>
-          </div>
-          <div className="input-group-text col-lg-4 bg-warning">   
-            <input type="radio" name="gender" value="male" id="male" class="form-check-input mt-1 " />
-            <label htmlFor="male" className="text-272343 ms-3">Male</label>
+            <label htmlFor="gender">
+              <p className="fs-3 fw-semibold text-272343 me-0">Gender: </p>
+            </label>
           </div>
           <div className="input-group-text col-lg-4 bg-warning">
-            <input type="radio" name="gender" value="female" id="female" class="form-check-input mt-1 " />
-            <label htmlFor="female" className="text-272343 ms-3">Female</label>
-          </div> 
+            <input
+              type="radio"
+              name="gender"
+              value="male"
+              id="male"
+              class="form-check-input mt-1 "
+            />
+            <label htmlFor="male" className="text-272343 ms-3">
+              Male
+            </label>
+          </div>
+          <div className="input-group-text col-lg-4 bg-warning">
+            <input
+              type="radio"
+              name="gender"
+              value="female"
+              id="female"
+              class="form-check-input mt-1 "
+            />
+            <label htmlFor="female" className="text-272343 ms-3">
+              Female
+            </label>
+          </div>
         </div>
-        
 
         <div className="input-group input-group-lg display-flex mt-4">
-          <span className="input-group-text bg-warning text-272343" id="inputGroup-sizing-lg"><label htmlFor="height"><p className="fs-3 fw-semibold">Height (in cms): </p></label></span>
-          <input type="text" className="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-lg" name="height" pattern="[0-9]{3}" id="height" />
+          <span
+            className="input-group-text bg-warning text-272343"
+            id="inputGroup-sizing-lg"
+          >
+            <label htmlFor="height">
+              <p className="fs-3 fw-semibold">Height (in cms): </p>
+            </label>
+          </span>
+          <input
+            type="text"
+            className="form-control"
+            aria-label="Sizing example input"
+            aria-describedby="inputGroup-sizing-lg"
+            name="height"
+            pattern="[0-9]{3}"
+            id="height"
+          />
         </div>
 
         <div className="display-flex mt-4">
           <div className="input-group input-group-lg">
-            <span className="input-group-text bg-warning text-272343" id="inputGroup-sizing-lg"><label htmlFor="weight"><p className="fs-3 fw-semibold">Weight (in kg): </p></label></span>
-            <input type="text" className="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-lg" name="weight" id="weight" pattern="[0-9]{2,3}" />
+            <span
+              className="input-group-text bg-warning text-272343"
+              id="inputGroup-sizing-lg"
+            >
+              <label htmlFor="weight">
+                <p className="fs-3 fw-semibold">Weight (in kg): </p>
+              </label>
+            </span>
+            <input
+              type="text"
+              className="form-control"
+              aria-label="Sizing example input"
+              aria-describedby="inputGroup-sizing-lg"
+              name="weight"
+              id="weight"
+              pattern="[0-9]{2,3}"
+            />
           </div>
         </div>
 
         <div className="display-flex mt-4">
           <div className="input-group input-group-lg">
-            <span className="input-group-text bg-warning text-272343" id="inputGroup-sizing-lg"><label htmlFor="lifestyle"><p className="fs-3 fw-semibold">Lifestyle: </p></label></span>
-            <input type="text" className="form-control bg-e3f6f5" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-lg" name="lifestyle" id="lifestyle" />
+            <span
+              className="input-group-text bg-warning text-272343"
+              id="inputGroup-sizing-lg"
+            >
+              <label htmlFor="lifestyle">
+                <p className="fs-3 fw-semibold">Lifestyle: </p>
+              </label>
+            </span>
+            <input
+              type="text"
+              className="form-control bg-e3f6f5"
+              aria-label="Sizing example input"
+              aria-describedby="inputGroup-sizing-lg"
+              name="lifestyle"
+              id="lifestyle"
+            />
           </div>
         </div>
 
         <div className="display-flex mt-4">
           <div className="input-group input-group-lg">
-            <span className="input-group-text bg-warning text-272343" id="inputGroup-sizing-lg"><label htmlFor="symptoms"><p className="fs-3 fw-semibold">Symptoms: </p></label></span>
-            <input type="text" className="form-control bg-e3f6f5" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-lg" name="symptoms" id="symptoms" />
+            <span
+              className="input-group-text bg-warning text-272343"
+              id="inputGroup-sizing-lg"
+            >
+              <label htmlFor="symptoms">
+                <p className="fs-3 fw-semibold">Symptoms: </p>
+              </label>
+            </span>
+            <input
+              type="text"
+              className="form-control bg-e3f6f5"
+              aria-label="Sizing example input"
+              aria-describedby="inputGroup-sizing-lg"
+              name="symptoms"
+              id="symptoms"
+            />
           </div>
         </div>
 
         <div className="display-flex mt-4">
           <div className="input-group input-group-lg">
-            <span className="input-group-text bg-warning text-272343" id="inputGroup-sizing-lg"><label htmlFor="medicalrecord"><p className="fs-3 fw-semibold">Previous Illness: </p></label></span>
-            <input type="text" className="form-control bg-e3f6f5" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-lg" name="medicalrecord" id="medicalrecord" />
+            <span
+              className="input-group-text bg-warning text-272343"
+              id="inputGroup-sizing-lg"
+            >
+              <label htmlFor="medicalrecord">
+                <p className="fs-3 fw-semibold">Previous Illness: </p>
+              </label>
+            </span>
+            <input
+              type="text"
+              className="form-control bg-e3f6f5"
+              aria-label="Sizing example input"
+              aria-describedby="inputGroup-sizing-lg"
+              name="medicalrecord"
+              id="medicalrecord"
+            />
           </div>
         </div>
 
         <div className="text-center mt-5">
-          <button type="submit" class="btn btn-block btn-lg bg-warning text-272343 fw-bold">Submit</button>
+          <button
+            type="submit"
+            class="btn btn-block btn-lg bg-warning text-272343 fw-bold"
+          >
+            Submit
+          </button>
         </div>
-        
-        
       </form>
       <div className="response">{!!response && response}</div>
     </div>

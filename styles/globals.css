@@ -1,0 +1,64 @@
+.res-card .marker {
+    background: url("/Marker.svg");
+    background-repeat: no-repeat;
+    background-position: 50%;
+    background-size: 100%;
+    position: absolute;
+    left: -50px;
+    text-align: left;
+    text-transform: uppercase;
+    z-index: 10;
+    /* display: flex; */
+    color: white;
+    height: 48px;
+    width: 80px;
+    padding: 14px 20px;
+    font-size: 0.75rem;
+}
+
+.scale-rectangle.scale-bmi {
+    height: 400px;
+    position: relative;
+}
+
+.range {
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: center;
+    margin: auto;
+    border-radius: 2px;
+    border-bottom: #fffffe;
+    border-width: 0;
+    border-bottom-width: 1px;
+    border-style: dashed;
+    background-color: #272343;
+    color: #fffffe;
+    height: calc(var(--height) - 1px);
+}
+
+.range.obese {
+    --height: calc(400px * .40);
+    /* height: calc(var(--height) -8px); */
+}
+
+.range.overweight {
+    --height: calc(400px * 0.098);
+    /* height: calc(-8px); */
+}
+
+.range.healthy {
+    --height: calc(400px * 0.128);
+    /* height: calc(-8px); */
+}
+
+.range.underweight {
+    --height: calc(400px * 0.37);
+    /* height: calc(-8px); */
+}
+
+.scale-rectangle.scale-bmi {
+    width: 80%;
+    max-width: 600px;
+    margin: auto;
+}

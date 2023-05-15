@@ -40,4 +40,8 @@ export default async function handler(req, res) {
     res.send(JSON.stringify(parsableJSONresponse));
   };
   runPrompt();
+  // this is just a sample response from Openai API, use this instead of runPrompt() to save api credits
+  // res.send(
+  //   '{"response":{"bmi":70,"health":"healthy","bmr":2107.14,"dietchart":"For your age and gender, a balanced diet containing fruits, vegetables, whole grain, lean meats, and healthy fats. Avoid processed and fried foods, sugary drinks and unhealthy snacks. Make sure to get plenty of sleep, stay hydrated and find ways to destress 🥕 🥗 🥝 🥥 🌰 🥞 🥓 🍗 🍖 🍤 🥗 🍱 🍘 🍯 🍮 🍩 🍪 🍰 🍦 🍫","workout":" Firstly, warming up is a must 🏃‍♂️. Examples of cardio include running jogging or dancing 🕺. Strength training with bodyweight exercises or dumbbells to build muscle is recommended 💪.Lastly, include some relaxing breathing or yoga sessions for stretching and mindfulness🧘‍♂️.","cardio":" Cardio is any exercise that increases your heart rate and causes you to sweat. Examples include running, jogging, swimming, skip rope etc. ⏱⏱⏱. A combination of cardio and strength training is preferred, but you can also choose to do only cardio workouts."}}'
+  // );
 }
